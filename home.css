@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+
+  }
+  
+  body {
+    font-family:Verdana,sans-serif;;
+    padding: 10px;
+    background: #ffffff;
+  };
+  }
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 03px;
+    height:auto;
+    text-align:center;
+    background:#ffffff;
+  }
+  
+  h2{
+    margin-right:10px;
+    padding-bottom:5px;
+    margin-top:1px;
+  }
+  
+  
+  p{ 
+    margin-right:10px;
+    margin-bottom:-10px;
+  }
+  }
+  
+  .header h1 {
+    font-size: 10px;
+    font-family:Georgia, serif ;
+    text-align:center;
+    margin-left:200px;
+    background:black;
+  }
+  
+  /* Style the top navigation bar */
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+     margin-left:-18px;
+      margin-right:-18px;
+      height:50px;
+  
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    float:right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-left:0px;
+    height:50px;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+    width: 100%;
+    height:auto;
+    background:#ffffff;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    background-color:#ffffff;
+    margin-left:200px;
+    margin-right:200px;
+    width: 100%;
+    height:400px;
+    padding: 20px;
+    background-image:url(array.png);
+    background-repeat: no-repeat;
+    animation-name:array;
+  }
+
+  .fakeimg img {
+  width: 100%;
+  transition: all .5s;
+}
+
+ .fakeimg:hover img {
+  transform: scale(1.3) rotate(10deg);
+}
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: linear-gradient(to top, #ccccff 0%, #ffffff 100%);;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left:5px;
+    font-size: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 1px;
+    text-align: center;
+    background: #333;
+    font-size:11px;
+    color:white;
+    margin-left:-18px;
+    margin-right:-18px;
+  }
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+  }
+  #para{
+    font-size: 23px;
+    line-height: 30px;
+}
+.center {
+    display: block;
+    margin-right: auto;
+    width: 50%;
+}
+
+.header h1{
+  padding:-10px;
+  margin-left:-18px;
+  margin-right:-18px;
+  margin-bottom: 25px;
+}
+
+p{
+  color:black;
+  font-size:20px;
+}
+
+.button1 {
+  background-color:#333;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  cursor: pointer;
+  float:left;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  padding-top:25px;
+}
+
+.button1 {
+  background-color:#333;
+  color:white;
+  margin-left:5px;
+  border:none;
+  padding-top:1px;
+  padding-bottom:0px;
+}
+
+.button1:hover {opacity: 1}
+
+.button2 {
+  background-color:#333;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  cursor: pointer;
+  float:right;
+  padding-top:0px;
+   opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.button2:hover {opacity: 1}
+
+.button2 {
+  background-color:#333;
+  color:white;
+  margin-left:1px;
+  border:none;
+  padding-top:0px;
+  padding-bottom:0px;
+}
+
+
+  </style>
+

@@ -1,0 +1,81 @@
+<html !DOCTYPE>
+<head>
+    <link rel="stylesheet" type="text/css" href="button_fancy.css">
+<style>
+    .box-shadow{
+        border:groove;
+         box-shadow: 0x 0px 10px var(--clr-gray-med);
+        width:5em;
+        height:2em;
+    }
+</style>
+    <script type='text/javascript'>
+        function addFields(){
+            // Generate a dynamic number of inputs
+            var number = document.getElementById("size").value;
+            // Get the element where the inputs will be added to
+            var container = document.getElementById("container");
+            // Remove every children it had before
+            while (container.hasChildNodes()) {
+                container.removeChild(container.lastChild);
+            }
+            for (i=0;i<number;i++){
+                // Append a node with a random text
+                container.appendChild(document.createTextNode("Array[" + (i+1) + "]"));
+
+                // Create an <input> element, set its type and name attributes
+                var input = document.createElement("input");
+                input.type = "input";
+                input.name = "size" + i;
+                input.id = "size" + i;
+
+                container.appendChild(input);
+                container.appendChild(document.createElement("br"));
+
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+            }
+        }
+    </script>
+</head>
+
+<input type="button" class="btn-add" value="submit">
+<script>
+    BtnAdd = document.querySelector(".btn-add"); 
+
+    BtnAdd.addEventListener("click",Addnew);
+    function Addnew(){
+        const newDiv = document.createElement("div");
+        console.log("add HI");
+        newDiv.classList.add('div_shadow');
+        document.body.appendChild(newDiv);
+    }
+
+</script>
+
+<style>
+    .div_shadow{
+        width: 5em;
+        height:2em;
+        box-shadow:0px 0px 10px violet;
+    }
+</style>
+
+<body>
+    <input type="text" id="size" name="size" value="">Number of Elements: (max. 10)<br />
+    <input type="submit" id="filldetails" onclick="addFields()">
+    <div id="container"/>
+    <div class="center"> 
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+ 
+
+
+        <h2>
+            <div id="div-container"> </div>
+        </h2>
+
+</body> 
+</html>

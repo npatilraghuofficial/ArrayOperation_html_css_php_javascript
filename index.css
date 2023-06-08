@@ -1,0 +1,306 @@
+*{
+    margin:10px;
+    padding:10px;
+    border:5px;
+    
+}.container{
+border:5px;
+border:2px green;
+width:auto;
+height:100%;
+}
+/*parent box style bg color*/
+#zero_0{
+    animation-name:zero;
+    animation-duration: 3s;
+     animation-iteration-count:infinite;
+    animation-delay:0;
+
+  
+}
+
+/* 2nd  visible  row  */
+#zero_1{
+    animation-name:zero;
+    animation-duration: 3s;
+    animation-delay:1.5;
+
+     animation-iteration-count:1;
+    
+}
+
+#one_1{
+    animation-name:zero;
+    animation-duration: 3s;
+    animation-delay:2.5s;
+     animation-iteration-count:infinite;
+    
+}
+/* 3rd visible  row  */
+#zero_2{
+    animation-name:zero;
+    animation-duration: 3s;
+    animation-delay:3s;
+     animation-iteration-count:1;
+    
+}
+#one_2{
+    animation-name:zero;
+    animation-duration: 3s;
+    animation-delay:3.5s;
+     animation-iteration-count:1;
+    
+}
+
+#two_2{
+    animation-name:zero;
+    animation-duration: 3s;
+    animation-delay:4s;
+     animation-iteration-count:infinite;
+    
+}
+
+/* 4th   visible  row  row*/
+
+#zero_3{
+    animation-name:zero;
+    animation-duration: 3s;
+    animation-delay:4.5s;
+     animation-iteration-count:1;
+    
+}
+#one_3{
+    animation-name:zero;
+    animation-duration: 3s;
+    animation-delay:5s;
+     animation-iteration-count:1;
+    
+}
+
+#two_3{
+    animation-name:zero;
+    animation-duration: 3s;
+    animation-delay:5.5s;
+     animation-iteration-count:;
+    
+}
+/* */
+#three_3{
+    animation-name:zero;
+    animation-duration: 4.5s;
+    animation-delay:6s;
+     animation-iteration-count:infinite;
+    
+}
+
+
+#one_0 {
+opacity:0
+}
+
+#two_0,#two_1{
+    opacity:0
+    }
+    
+
+#three_0,#three_1,#three_2{
+        opacity:0
+    }
+        
+/* box parent */
+@keyframes zero{
+    from{background-color: orange;
+    content-visibility: }
+    to{background-color:antiquewhite;
+        border-color: blueviolet ;
+        border-radius: 2px;
+        box-shadow: 2px;
+    content:30px;
+opacity:1}
+    
+}
+@keyframes zero_child{
+    from{background-color: lightgoldenrodyellow;
+    content-visibility: none;}
+    to{
+    content:30px;
+    animation-delay:2.5s;
+
+opacity:1}
+    
+}
+
+/*  to create new  child class / numbers animation */
+/*first visible  row*/
+
+#zero_0_child{
+    animation-name:zero_child;
+    animation-duration: 3s;
+    animation-iteration-count:20;
+}
+/*2nd visible row row*/
+#zero_1_child{
+    animation-name:zero_child;
+    animation-duration: 3s;
+    animation-iteration-count:20;
+    animation-delay: 2s;
+}
+
+#one_1_child{
+    animation-name:zero_child;
+    animation-duration: 3s;
+    animation-iteration-count:20;
+    animation-delay: 3s;
+
+
+}
+/*3rd visible row row*/
+
+#zero_2_child{
+    animation-name:zero_child;
+    animation-duration: 3s;
+    animation-iteration-count:20;
+    animation-delay: 3s;
+}
+#one_2_child{
+    animation-name:zero_child;
+    animation-duration: 3s;
+    animation-iteration-count:15;
+    animation-delay: 3.5s;
+}
+
+#two_2_child{
+    animation-name:zero_child;
+    animation-duration: 3s;
+    animation-iteration-count:15;
+    animation-delay: 3.5s;
+}
+
+/*4th visible row row*/
+#zero_3_child{
+    animation-name:zero_child;
+    animation-duration: 3s;
+    animation-iteration-count:20;
+    animation-delay: 2s;
+}
+#one_3_child{
+    animation-name:zero_child;
+    animation-duration: 3s;
+    animation-iteration-count:20;
+    animation-delay: 4s;
+}
+#two_3_child{
+    animation-name:zero_child;
+    animation-duration: 3s;
+    animation-iteration-count:20;
+    animation-delay: 6s;
+}
+
+#three_3_child{
+    animation-name:zero_child;
+    animation-duration: 3s;
+    animation-iteration-count:20;
+    animation-delay: 6s;
+}
+
+
+
+
+
+
+.array{
+    width: 80px;
+    height: 40px;
+    background-color:lightgoldenrodyellow;
+    animation-name: example;
+    animation-duration: 4s;
+    border:2px 2px 2px 2px;
+    border:groove;
+    float:right;
+    display:flex;
+  }
+.parent{
+    width: 125px;
+    height: 80px;
+    background-color:greenyellow;
+    animation-name: example;
+    animation-duration: 4s;
+   
+    border:groove;
+    float:right;
+    position:relative;
+  }
+}
+ .session{
+    border:5px;
+    border:groove;
+    }
+
+body{
+
+}
+
+img{
+    display:block;
+    margin-left:auto;
+ // opacity:;
+  margin-top:15px;
+  margin-right:5px;
+  filter:drop-shadow(3px 8px 9px green);
+
+    
+}
+img:hover{
+    transform:scaleX(-1);
+}
+.img.shadow
+{
+    filter:drop-shadow(8px 9px 10px green);
+}
+
+.insertion{
+    border-color: blue;
+    height:100%;
+}
+
+
+#pointer_0{
+    animation-name:pointer;
+    animation-duration: 1.25s;
+    animation-delay:0s;
+     animation-iteration-count:2;
+    
+}
+
+#pointer_1{
+    animation-name:pointer;
+    animation-duration: 1.25s;
+    animation-delay:2s;
+     animation-iteration-count:2;
+    
+}
+
+#pointer_2{
+    animation-name:pointer;
+    animation-duration: 1.5s;
+    animation-delay:5s;
+     animation-iteration-count:3;
+    
+}
+#pointer_3{
+    animation-name:pointer;
+    animation-duration: 1s;
+    animation-delay:10s;
+     animation-iteration-count:5;
+    
+}
+/*2nd hand gesture
+*/
+
+
+@keyframes pointer{
+           0%   {opacity:0}
+        25%  {opacity:0}
+        50%  {opacity:1}
+        100% {opacity:1}
+      }

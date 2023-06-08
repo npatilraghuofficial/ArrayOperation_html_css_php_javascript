@@ -1,0 +1,7 @@
+f=open("a.txt","w")
+new="im new text goungggg"
+f.writelines(new)
+f.close()
+
+
+

@@ -1,0 +1,205 @@
+<?php
+include("db_link_pesu.php");
+error_reporting(0);
+session_start();
+ 
+$query ="SELECT * FROM array_elements";
+$data = mysqli_query($conn, $query);
+$total = mysqli_num_rows($data);
+
+while($result = mysqli_fetch_assoc($data)){
+   
+        ?>
+        
+        
+        <?php 
+                $size=$result['size'];
+                $in=$result['IndexNumber'];
+                $address=$result['address'];
+                $val=$result['val'];
+
+                echo $size;
+                echo $in;
+                echo $address;
+                echo $val;
+}
+?>
+
+<html !DOCTYPE>
+    <head>
+        <link rel="stylesheet" type="text/css" href="dynamic_input.css">
+
+
+    <style>
+        .div_shadow{
+    width: 125px;
+    height: 80px;
+    background-color:greenyellow;
+    animation-name: zero;
+    animation-duration: 4s;
+   
+    border:groove;
+    float:right;
+    position:inherit;
+  }
+  
+  .childdiv{
+    width: 150;
+    height: 80px;
+    background-color:lightgoldenrodyellow;
+    animation-name: example;
+    animation-duration: 4s;
+    border:2px 2px 2px 2px;
+    border:groove;
+    float:right;
+    position:relative;
+    display:flex;
+  }
+}
+    /* box parent */
+@keyframes zero{
+    from{background-color: orange;
+    content-visibility: }
+    to{background-color:antiquewhite;
+        border-color: blueviolet ;
+        border-radius: 2px;
+        box-shadow: 2px;
+    content:30px;
+opacity:1}
+    
+}
+@keyframes childdiv{
+    from{background-color: lightgoldenrodyellow;
+    content-visibility: none;}
+    to{
+    content:30px;
+    animation-delay:2.5s;
+
+opacity:1}
+    
+}
+        .container{
+            height:auto;
+            margin-left: 20%;
+        }
+    </style>
+        <script type='text/javascript'>
+            function addFields(){
+                // Generate a dynamic number of inputs
+                var number = document.getElementById("size").value;
+                // Get the element where the inputs will be added to
+
+               
+                for (i=0;i<number;i++){
+                                        // Append a node 
+    
+                    // Create an <input> element, set its type and name attributes
+                        var newDiv = document.createElement("div");
+                        var childDiv = document.createElement("div");
+
+
+                        newDiv.type = "div";
+                        newDiv.name = 1000+i; 
+                        newDiv.id = "size"+ i ;
+                        newDiv.value = "size" 
+
+
+                        newDiv.classList.add('div_shadow');
+                        console.log(newDiv.id) 
+
+
+                        newDiv.appendChild(childDiv);
+                        document.body.appendChild(newDiv);
+
+                        childDiv.classList.add('childDiv');
+
+
+                    
+                        console.log(newDiv.id)
+
+
+
+                    // container.appendChild(document.createElement("br"));
+
+    
+                    // Append a line break 
+                    // container.appendChild(document.createElement("br"));
+                    // container.appendChild(document.createTextNode("Array[" + (i+1) + "]"));
+
+                    
+                    
+
+
+
+
+
+                    
+             }
+
+             }
+             document.body.appendChild(document.createElement("br"));
+
+        </script>
+
+
+<script type='text/javascript'>
+    function elements(){
+        // Generate a dynamic number of inputs
+        var number = document.getElementById("size").value;
+        // Get the element where the inputs will be added to
+        var container = document.getElementById("container");
+        // Remove every children it had before
+        while (container.hasChildNodes()) {
+            container.removeChild(container.lastChild);
+        }
+        for (i=0;i<number;i++){
+            // Append a node with a random text
+
+            container.appendChild(document.createElement("br"));
+
+            container.appendChild(document.createTextNode(" Enter Vlaue of 1st Element -->> Array[" + (i+1) + "]"));
+
+            // Create an <input> element, set its type and name attributes
+            var input = document.createElement("input");
+            input.type = "input";
+            input.name = "size" + i;
+            input.id = "size" + i;
+
+            container.appendChild(input);
+            container.appendChild(document.createElement("br"));
+
+            // Append a line break 
+            container.appendChild(document.createElement("br"));
+           
+           
+
+
+        }
+        container.appendChild(document.createElement("br"));
+
+      
+    }
+</script>
+
+
+    
+    <body>
+        Number of Elements: (max. 10) <input type="text" id="size" name="size" value="5">&nbsp<input type="button" id="filldetails"  VALUE ="Add Elements" onclick="elements()">
+        <input type="submit" id="filldetails" id="submit" value ="Get output" onclick="addFields()">
+
+       
+            <div id="container"/>
+            <div class="center"> 
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+         
+     
+
+      
+    
+    
+    </body> 
+    </html>
+    

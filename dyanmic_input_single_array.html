@@ -1,0 +1,152 @@
+
+<html !DOCTYPE>
+    <head>
+        <link rel="stylesheet" type="text/css" href="dynamic_input.css">
+
+    <style>
+     
+
+        .container{
+            height:auto;
+            margin-left: 20%;
+        }
+    </style>
+        <script type='text/javascript'>
+            function addFields(){
+                // Generate a dynamic number of inputs
+                var number = document.getElementById("size").value;
+                // Get the element where the inputs will be added to
+                var container = document.getElementById("container");
+
+                // Remove every children it had before
+                while (container.hasChildNodes()) {
+                    container.removeChild(container.lastChild);
+                }
+                for (i=0;i<number;i++){
+                  
+                    // Append a node with a random text
+    
+                    // Create an <input> element, set its type and name attributes
+                        var newDiv = document.createElement("div");
+                        var childDiv = document.createElement("div");
+
+
+                        newDiv.type = "div";
+                        newDiv.name = "size" + i;
+                        newDiv.id = "size" +i;
+                        newDiv.value = "size" + i;
+
+                        newDiv.classList.add('div_shadow');
+                        console.log(newDiv.id) 
+
+
+                        container.appendChild(newDiv);
+                        container.appendChild(childDiv);
+                        childDiv.classList.add('childDiv');
+
+
+                    
+                        console.log(newDiv.id)
+
+
+
+                    // container.appendChild(document.createElement("br"));
+
+    
+                    // Append a line break 
+                    // container.appendChild(document.createElement("br"));
+                    // container.appendChild(document.createTextNode("Array[" + (i+1) + "]"));
+
+                    }
+                }
+
+        </script>
+
+
+<script type='text/javascript'>
+    function elements(){
+        // Generate a dynamic number of inputs
+        var number = document.getElementById("size").value;
+        // Get the element where the inputs will be added to
+        var container = document.getElementById("container");
+        // Remove every children it had before
+        while (container.hasChildNodes()) {
+            container.removeChild(container.lastChild);
+        }
+        for (i=0;i<number;i++){
+            // Append a node with a random text
+
+            container.appendChild(document.createElement("br"));
+
+            container.appendChild(document.createTextNode(" Enter Vlaue of 1st Element -->> Array[" + (i+1) + "]"));
+
+            // Create an <input> element, set its type and name attributes
+            var input = document.createElement("input");
+            input.type = "input";
+            input.name = "size" + i;
+            input.id = "size" + i;
+
+            container.appendChild(input);
+            container.appendChild(document.createElement("br"));
+
+            // Append a line break 
+            container.appendChild(document.createElement("br"));
+           
+           
+
+
+        }
+        container.appendChild(document.createElement("br"));
+
+      
+    }
+
+</script>
+
+
+
+          <div class="parent" id="zero_0">
+ 
+        </span> <sup> 0-th Position</sup><div class="array" id="zero-sub" ><span id="zero_0_child" style="opacity:0;" >25</span></div>
+</div>
+<span>   <img src="point.png" width="50px" height="auto"  style="opacity:0"  id="pointer_0"></span>
+
+    </head>
+    
+    <!-- <script>
+        BtnAdd = document.querySelector(".btn-add"); 
+    
+        BtnAdd.addEventListener("click",Addnew);
+        function Addnew(){
+            const newDiv = document.createElement("div");
+            console.log("add HI");
+            newDiv.classList.add('div_shadow');
+            document.body.appendChild(newDiv);
+           size.appendChild(childDiv);
+
+        }
+        
+    
+    </script>  -->
+    
+   
+    <body>
+        Number of Elements: (max. 10) <input type="text" id="size" name="size" value="5">&nbsp<input type="button" id="filldetails"  VALUE ="Add Elements" onclick="elements()">
+        <input type="submit" id="filldetails" id="submit" value ="Get output" onclick="addFields()">
+
+       
+            <div id="container"/>
+            <div class="center"> 
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+         
+     
+
+      
+    
+    
+    </body> 
+    </html>
+    
